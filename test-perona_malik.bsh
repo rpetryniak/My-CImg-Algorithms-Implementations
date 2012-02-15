@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cat images-selected.txt|while read filename
+do
+  echo "Process: "$filename
+  bin/perona_malik -i $filename -show 2 -delta 1 -it 100
+done
