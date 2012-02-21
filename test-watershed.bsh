@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cat images-selected2.txt|while read filename
+do
+  echo "Process: "$filename
+  bin/app_watershed -i $filename -show 2 -delta 1 -it 100
+done
